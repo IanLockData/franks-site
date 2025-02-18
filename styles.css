@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    margin-top: 60px;
+}
+
+.block {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Top Block */
+.top-block {
+    padding: 20px; /* Unified padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: white;
+    position: fixed; /* Add fixed positioning */
+    top: 0; /* Pin to top */
+    left: 0; /* Pin to left */
+    right: 0; /* Pin to right */
+    background-color: #f5f5f5; /* Add background color to ensure content doesn't show through */
+    z-index: 1000; /* Ensure menu stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds subtle shadow */
+}
+
+.top-block p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.top-image {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Title Block */
+
+.first-block {
+    display: flex;
+    justify-content: space-between; /* Ensures space between the two containers */
+    padding: 20px;
+    margin: 0px;
+    text-align: left;
+}
+
+ 
+.first-block-container-one h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+} 
+
+
+.first-block-container-one {
+    width: 60%; /* Left side */
+    padding-right: 20px; /* Optional: add some space between text and image */
+}
+
+.cta-button {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    padding: 12px 24px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.first-block-container-two {
+    width: 40%; /* Right side */
+}
+
+.first-block-container-two img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Needed for margin auto to work */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+/* Services Block */
+.second-block {
+    padding: 40px; /* Unified padding */
+}
+
+.second-block h2 {
+    font-size: 48px; /* Doubled from 24px */
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.service-item-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: space-between; /* Space between items */
+}
+
+.service-item {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    flex: 1 1 1 100%;
+}
+
+.service-item:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Update the service item heading to maintain color transition */
+.service-item h3 {
+    margin: 0;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Ensure paragraph text also transitions smoothly */
+.service-item p {
+    transition: all 0.3s ease;
+}
+
+/* Calendly Block */
+.calendly-block {
+    padding: 30px 10px; /* Unified padding */
+}
+
+.calendly-inline-widget {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.calendly-block h2 {
+    font-size: 48px; /* Doubled from 24px */
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* Footer Block */
+.footer-block {
+    color: #1a1a1a;
+    padding: 15px;
+    font-size: 12px;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    text-align: left;
+}
+
+.p-footer {
+    margin: 0;
+}
+
+
+/* Menu & Logo Specific Styles */
+.menu a {
+    color: #1a1a1a; /* Ensure text is white */
+    text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove outline when clicked */
+    padding: 5px;
+    font-weight: 400;
+}
+
+.logo a {
+    color: #1a1a1a; /* Ensure text is white */
+    text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove outline when clicked */
+    padding: 5px;
+    font-weight: 500;
+}
+
+/* Remove active/visited link styling */
+.menu a:active, .menu a:visited, .logo a:active, .logo a:visited {
+    color: #1a1a1a; /* Keep the text color white even when active or visited */
+    text-decoration: none; /* Remove underline when clicked or visited */
+    outline: none; /* Remove outline when clicked */
+}
+
+.fas.fa-phone {
+    color: #1a1a1a; /* Change the color */
+    font-size: .75em; /* Adjust the size */
+    margin-right: 0px; /* Add some spacing between icon and number */
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #007BFF;
+        position: fixed; /* Change to fixed */
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+        color: white;
+        z-index: 999; 
+    }
+
+
+    .menu a, .menu a:active, .menu a:visited {
+        color: white;
+        text-decoration: none;
+        outline: none;
+    }
+
+    .menu .fas.fa-phone {
+        color: white;
+    }
+
+    .menu a:hover, .phone-link:hover {
+        color: orange;
+    }
+
+    .logo a:active, .logo a:visited {
+        color: #1a1a1a; /* Keep the text color white even when active or visited */
+        text-decoration: none; /* Remove underline when clicked or visited */
+        outline: none; /* Remove outline when clicked */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+        padding: 10px;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 4px;
+        background-color: #1a1a1a;
+        margin: 6px auto;
+    }
+
+    .hamburger:hover .line {
+        background-color: #4a4a4a;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .first-block {
+        flex-direction: column; /* Stack the containers vertically on mobile */
+        align-items: center; /* Center align items */
+    }
+
+    .first-block-container-one{
+        width: 100%; /* Make both containers take full width */
+        padding-right: 0; /* Remove any right padding */
+        padding-bottom: 60px;
+    }
+
+    .first-block-container-two {
+        width: 100%; /* Make both containers take full width */
+        padding-right: 0; /* Remove any right padding */
+    }
+}
+
+/* Media Query for Desktop */
+@media (min-width: 769px) {
+    .block, .top-block, .second-block, .calendly-block, .footer-block {
+        padding: 60px 240px; /* Unified padding for desktop */
+    }
+
+    .top-block {
+        padding: 20px 240px; /* Separate padding for header */
+    }
+
+    .menu {
+        margin-left: auto;
+    }
+
+    .service-item {
+        flex: 1 1 30%; /* On desktop, each item takes up 30% of the container width */
+    }
+}
