@@ -87,11 +87,24 @@
         gtag('config', 'YOUR_GOOGLE_ANALYTICS_ID');
     </script>
 
-    <script>
-        function toggleMenu() {
+<script>
+    // Single toggleMenu function definition
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    }
+
+    // Add event listeners to all navigation links
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
             const menu = document.querySelector('.menu');
-            menu.classList.toggle('open'); // Toggle the visibility of the menu
-        }
-    </script>
+            menu.classList.remove('open'); // Changed from toggle to remove
+        });
+    });
+
+    // Make toggleMenu available globally for the onclick attribute
+    window.toggleMenu = toggleMenu;
+</script>
+
 </body>
 </html>

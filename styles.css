@@ -54,7 +54,8 @@ body {
  
 .first-block-container-one h1 {
     font-size: 48px;
-    margin-bottom: 0;
+    margin-bottom: 30px; /* Add spacing between h1 and CTA button */
+
 } 
 
 
@@ -64,6 +65,7 @@ body {
 }
 
 .cta-button {
+    margin-top: 20px; /* Add additional spacing above the CTA button */
     background-color: white;
     color: #007BFF;
     border: 2px solid #007BFF;
