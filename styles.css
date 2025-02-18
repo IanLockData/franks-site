@@ -42,6 +42,40 @@ body {
     margin-top: 15px;
 }
 
+/* Menu & Logo Specific Styles */
+.menu a {
+    color: #1a1a1a; /* Ensure text is white */
+    text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove outline when clicked */
+    padding: 5px;
+    font-weight: 400;
+}
+
+.logo a {
+    color: #1a1a1a; /* Ensure text is white */
+    text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove outline when clicked */
+    padding: 5px;
+    font-weight: 500;
+}
+
+/* Remove active/visited link styling */
+.menu a:active, .menu a:visited, .logo a:active, .logo a:visited {
+    color: #1a1a1a; /* Keep the text color white even when active or visited */
+    text-decoration: none; /* Remove underline when clicked or visited */
+    outline: none; /* Remove outline when clicked */
+}
+
+.fas.fa-phone {
+    color: #1a1a1a; /* Change the color */
+    font-size: .75em; /* Adjust the size */
+    margin-right: 0px; /* Add some spacing between icon and number */
+}
+
+.menu a:hover, .phone-link:hover {
+    color: #45586D; /* Ensure text is white */
+}
+
 /* Title Block */
 
 .first-block {
@@ -60,7 +94,7 @@ body {
 
 .first-block-container-one h1 {
     font-size: 40px;
-    margin-bottom: 30px; /* Add spacing between h1 and CTA button */
+    margin-bottom: 20px; /* Add spacing between h1 and CTA button */
     margin: 0;
 }
 
@@ -87,11 +121,15 @@ body {
 }
 
 .first-block-container-two img {
-    width: 100%; /* Ensure the image fills the container */
+    width: 100%; /* Ensure the image fits within the container */
+    max-width: 800px; /* Prevent image from getting too large on wide screens */
     height: auto; /* Maintain aspect ratio */
     margin: 0 auto; /* Center the image horizontally */
     display: block; /* Needed for margin auto to work */
     border-radius: 8px; /* Add rounded corners */
+    position: relative; /* Enable positioning */
+    left: 50%; /* Move right by 50% of container width */
+    transform: translateX(-50%); /* Pull back left by 50% of image width */
 }
 
 /* Services Block */
@@ -159,8 +197,23 @@ body {
 
 /* Footer Block */
 .footer-block {
-    color: #1a1a1a;
-    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Ensures space between the two containers */
+    padding: 20px;
+    margin: 0px;
+    text-align: left;
+    background-color: #45586D;
+}
+
+.footer-block a:hover {
+    color: orange;
+}
+
+.footer-content {
+    width: 60%; /* Left side */
+    padding-right: 20px; /* Optional: add some space between text and image */
+    text-align: left;
     font-size: 12px;
     flex-direction: column; /* Stack content vertically */
     align-items: flex-start; /* Align content to the left */
@@ -171,44 +224,18 @@ body {
     margin: 0;
 }
 
-.footer-block a {
-    color: #45586D;
+.footer-block a, .footer-block a:active, .footer-block a:visited {
+    color: white;
 }
 
-
-/* Menu & Logo Specific Styles */
-.menu a {
-    color: #1a1a1a; /* Ensure text is white */
-    text-decoration: none; /* Remove underline from links */
-    outline: none; /* Remove outline when clicked */
-    padding: 5px;
-    font-weight: 400;
+.footer-nav {
+    width: 40%; /* Left side */
 }
 
-.logo a {
-    color: #1a1a1a; /* Ensure text is white */
-    text-decoration: none; /* Remove underline from links */
-    outline: none; /* Remove outline when clicked */
-    padding: 5px;
-    font-weight: 500;
+.footer-nav a:hover {
+    color: orange;
 }
 
-/* Remove active/visited link styling */
-.menu a:active, .menu a:visited, .logo a:active, .logo a:visited {
-    color: #1a1a1a; /* Keep the text color white even when active or visited */
-    text-decoration: none; /* Remove underline when clicked or visited */
-    outline: none; /* Remove outline when clicked */
-}
-
-.fas.fa-phone {
-    color: #1a1a1a; /* Change the color */
-    font-size: .75em; /* Adjust the size */
-    margin-right: 0px; /* Add some spacing between icon and number */
-}
-
-.menu a:hover, .phone-link:hover {
-    color: #45586D; /* Ensure text is white */
-}
 
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
