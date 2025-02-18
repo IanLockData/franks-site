@@ -5,7 +5,7 @@ body {
     color: #333;
     background-color: #f5f5f5;
     line-height: 1.6;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .block {
@@ -15,19 +15,20 @@ body {
 
 /* Top Block */
 .top-block {
-    padding: 20px; /* Unified padding */
+    height: 60px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
     color: white;
-    position: fixed; /* Add fixed positioning */
-    top: 0; /* Pin to top */
-    left: 0; /* Pin to left */
-    right: 0; /* Pin to right */
-    background-color: #f5f5f5; /* Add background color to ensure content doesn't show through */
-    z-index: 1000; /* Ensure menu stays on top of other content */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds subtle shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .top-block p {
@@ -35,8 +36,8 @@ body {
     margin-bottom: 0;
 }
 
-.top-image {
-    width: 100%;
+.header-image {
+    width: 100px;
     height: auto;
     margin-top: 15px;
 }
@@ -211,13 +212,17 @@ body {
 
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
+    body {
+        margin-top: 60px;
+    }
+    
     .menu {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #45586D;
-        position: fixed; /* Change to fixed */
-        top: 60px; /* Adjust based on your header height */
+        position: fixed;
+        top: 80px;
         left: 0;
         text-align: center;
         padding: 20px 0;
@@ -276,6 +281,7 @@ body {
     .first-block-container-one{
         width: 100%; /* Make both containers take full width */
         padding-right: 0; /* Remove any right padding */
+        margin-bottom: 100px;
     }
 
     .first-block-container-one h1 {
@@ -285,6 +291,16 @@ body {
     .first-block-container-two {
         width: 100%; /* Make both containers take full width */
         padding-right: 0; /* Remove any right padding */
+    }
+
+    .top-block {
+        height: 50px; /* Reduced from 60px */
+        padding: 5px 20px; /* Reduced padding */
+    }
+
+    .header-image {
+        width: 80px; /* Slightly smaller on mobile */
+        margin-top: 0; /* Remove top margin on mobile */
     }
 }
 
