@@ -238,7 +238,7 @@ body {
 
 
 /* Mobile-specific Styles */
-@media (max-width: 768px) {
+@media (max-width: 1350px) {
     body {
         margin-top: 60px;
     }
@@ -317,7 +317,11 @@ body {
 
     .first-block-container-two {
         width: 100%; /* Make both containers take full width */
-        padding-right: 0; /* Remove any right padding */
+    }
+
+    .first-block-container-two img {
+        margin: 0 auto; /* Center the image horizontally */
+        width: 100%; /* Ensure the image takes full width */
     }
 
     .top-block {
@@ -332,7 +336,7 @@ body {
 }
 
 /* Media Query for Desktop */
-@media (min-width: 769px) {
+@media (min-width: 1351px) {
     .block, .top-block, .second-block, .calendly-block, .footer-block {
         padding: 60px 120px; /* Unified padding for desktop */
     }
